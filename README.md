@@ -90,7 +90,7 @@ ProyectoJavaFX3
 1. Clonar el repositorio:
 
 ```bash
-git clone (https://github.com/Briander-N/Tarea-Dise-o-POO.git)
+git clone https://github.com/Briander-N/Tarea-Dise-o-POO.git
 ```
 
 2. Abrir el proyecto en IntelliJ IDEA.
