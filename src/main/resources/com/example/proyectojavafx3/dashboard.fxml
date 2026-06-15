@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.*?>
+
+<BorderPane prefHeight="600"
+            prefWidth="900"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.proyectojavafx3.DashboardController">
+
+    <left>
+
+        <VBox spacing="10"
+              prefWidth="180"
+              styleClass="menu"
+              style="-fx-padding: 15;">
+
+            <Label text="MiTienda"
+                   styleClass="menu-title"/>
+            <Label text="Sistema de Ventas"
+                   styleClass="menu-subtitle"/>
+            <Button text="Inicio"
+                    styleClass="menu-button"/>
+
+            <Button text="Productos"
+                    styleClass="menu-button"/>
+
+            <Button text="Categorías"
+                    styleClass="menu-button"/>
+
+            <Button text="Clientes"
+                    styleClass="menu-button"/>
+
+            <Button text="Ventas"
+                    styleClass="menu-button"/>
+
+            <Button text="Reportes"
+                    styleClass="menu-button"/>
+
+            <Button text="Usuarios"
+                    styleClass="menu-button"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Button text="Cerrar sesión"
+                    styleClass="menu-button"/>
+
+        </VBox>
+
+    </left>
+    <top>
+
+        <HBox spacing="10"
+              styleClass="top-bar">
+            <Label text="Productos"
+                   style="-fx-font-size: 22;
+                      -fx-font-weight: bold;"/>
+
+        </HBox>
+
+    </top>
+
+    <center>
+
+        <VBox spacing="15" style="-fx-padding: 15;">
+
+            <Label text="Registro / Edición de Producto"
+                   styleClass="section-title"/>
+            <GridPane hgap="10" vgap="10">
+
+                <Label text="Código"/>
+                <TextField fx:id="txtCodigo"
+                           promptText="Código"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Nombre"
+                       GridPane.rowIndex="1"/>
+                <TextField fx:id="txtNombre"
+                           promptText="Nombre"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"/>
+
+                <Label text="Categoría"
+                       GridPane.rowIndex="2"/>
+                <ComboBox fx:id="cbCategoria"
+                          promptText="Categoría"
+                          GridPane.columnIndex="1"
+                          GridPane.rowIndex="2"/>
+
+                <Label text="Precio"
+                       GridPane.rowIndex="3"/>
+                <TextField fx:id="txtPrecio"
+                           promptText="Precio"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="3"/>
+
+                <Label text="Stock"
+                       GridPane.rowIndex="4"/>
+                <TextField fx:id="txtStock"
+                           promptText="Stock"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="4"/>
+
+                <Label text="Estado"
+                       GridPane.rowIndex="5"/>
+                <ComboBox fx:id="cbEstado"
+                          promptText="Estado"
+                          GridPane.columnIndex="1"
+                          GridPane.rowIndex="5"/>
+
+            </GridPane>
+
+            <HBox spacing="10">
+
+                <Button text="Nuevo"
+                        styleClass="btn-new"
+                        onAction="#nuevo"/>
+
+                <Button text="Guardar"
+                        styleClass="btn-save"
+                        onAction="#guardar"/>
+
+                <Button text="Actualizar"
+                        styleClass="btn-update"
+                        onAction="#actualizar"/>
+
+                <Button text="Eliminar"
+                        styleClass="btn-delete"
+                        onAction="#eliminar"/>
+
+                <Button text="Limpiar"
+                        styleClass="btn-clear"
+                        onAction="#limpiar"/>
+
+            </HBox>
+
+            <TableView fx:id="tablaProductos"
+                       VBox.vgrow="ALWAYS">
+                <columns>
+
+                    <TableColumn fx:id="colCodigo"
+                                 text="Código"/>
+
+                    <TableColumn fx:id="colNombre"
+                                 text="Nombre"/>
+
+                    <TableColumn fx:id="colCategoria"
+                                 text="Categoría"/>
+
+                    <TableColumn fx:id="colPrecio"
+                                 text="Precio"/>
+
+                    <TableColumn fx:id="colStock"
+                                 text="Stock"/>
+
+                    <TableColumn fx:id="colEstado"
+                                 text="Estado"/>
+
+                    <TableColumn text="Acciones"/>
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

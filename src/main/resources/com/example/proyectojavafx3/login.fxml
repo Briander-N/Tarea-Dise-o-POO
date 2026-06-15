@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.proyectojavafx3.LoginController"
+           style="-fx-background-color: #f5f6fa;">
+
+    <VBox spacing="15"
+          maxWidth="320"
+          prefWidth="320"
+          style="-fx-background-color: white;
+                 -fx-padding: 30;
+                 -fx-background-radius: 12;">
+
+        <HBox spacing="10">
+
+            <StackPane prefWidth="40"
+                       prefHeight="40"
+                       style="-fx-background-color: #4f6df5;
+                              -fx-background-radius: 10;">
+
+                <Label text="🛒"
+                       style="-fx-text-fill: white;
+                              -fx-font-size: 16;"/>
+
+            </StackPane>
+
+            <VBox>
+                <Label text="MiTienda"
+                       style="-fx-font-size: 22;
+                              -fx-font-weight: bold;"/>
+
+                <Label text="Sistema de Ventas"
+                       style="-fx-text-fill: gray;"/>
+            </VBox>
+
+        </HBox>
+
+        <Label text="Iniciar sesión"
+               style="-fx-font-size: 20;
+                      -fx-font-weight: bold;"/>
+
+        <Label text="Usuario"/>
+
+        <TextField fx:id="txtUsuario"
+                   promptText="Ej: admin"/>
+
+        <Label text="Contraseña"/>
+
+        <PasswordField fx:id="txtPassword"/>
+
+        <Label text="Rol"/>
+
+        <ComboBox fx:id="cbRol"
+                  promptText="Seleccione"/>
+
+        <Button text="Ingresar"
+                onAction="#ingresar"
+                maxWidth="Infinity"/>
+
+        <Label text="admin / 1234 / Administrador"
+               style="-fx-text-fill: gray;"/>
+
+    </VBox>
+
+</StackPane>

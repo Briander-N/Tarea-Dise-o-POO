@@ -1,4 +1,4 @@
-package com.example.tareadisenio;
+package com.example.proyectojavafx3;
 
 import javafx.application.Application;
 
